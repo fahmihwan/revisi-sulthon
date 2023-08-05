@@ -43,8 +43,8 @@
             <div class="paragraf">
                 <p style="font-weight: bold">Berikut kode pembayaran rekening virtual: </p>
                 <p style="padding: 10px 0px; font-weight: bold; font-size: 20px;">
-                    <span style="color:gray">Bill Key</span> {{ $data['response']['bill_key'] }} <br>
                     <span style="color:gray">Biller Code</span> {{ $data['response']['biller_code'] }}
+                    <span style="color:gray">Bill Key</span> {{ $data['response']['bill_key'] }} <br>
                 </p>
                 <p>Kami akan memproses pesanan setelah kami menerima pembayaran Anda</p>
             </div>

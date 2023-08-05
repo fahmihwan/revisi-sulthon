@@ -71,6 +71,7 @@ class CheckoutController extends Controller
 
     public function pembayaran()
     {
+
         // get session
         $get_sesssion_rajaongkir = session()->get('rajaongkir');
         $get_session_credential = session()->get('rajaongkir_credential');
@@ -172,6 +173,7 @@ class CheckoutController extends Controller
         // cek metode pembayaran
         $data = $this->cek_data_midtrans($request->bank, $gross_amount, $keranjang, $user);
 
+        // return $data;
         $batas_akhir_pembayaran = Carbon::parse($data['custom_expiry']['order_time'])
             ->addHour(24)
             ->format('d F Y H:i:s');
@@ -195,6 +197,7 @@ class CheckoutController extends Controller
         ));
 
         $response = curl_exec($curl);
+
         $err = curl_error($curl);
         curl_close($curl);
 

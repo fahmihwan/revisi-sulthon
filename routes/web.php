@@ -16,6 +16,7 @@ use App\Http\Controllers\Toko\CheckoutController;
 use App\Http\Controllers\Toko\CustomerController;
 use App\Http\Controllers\Toko\LandingpageController;
 use App\Http\Controllers\Toko\RajaOngkirController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 
@@ -175,3 +176,7 @@ Route::middleware(['auth:webadmin'])->group(function () {
 // demo
 Route::get('demo-admin', [AuthAdminController::class, 'demo']);
 Route::resource('/admin/auth', AuthAdminController::class);
+
+// Route::get('/linkstorage', function () {
+//     Artisan::call('storage:link');
+// });

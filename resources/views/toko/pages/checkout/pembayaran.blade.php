@@ -40,7 +40,8 @@
                 </div>
             </div>
 
-            <form action="/checkout/pembayaran/pay" method="POST">
+            {{-- <form action="/checkout/pembayaran/pay" method="POST"> --}}
+            <form action="/checkout/pembayaran/pay" method="POST" id="form-pembayaran">
                 @csrf
                 <div class="p-5 ">
                     <p class="font-bold border-b-2 py-2 block mb-5">METODE PEMBAYARAN</p>
@@ -74,14 +75,14 @@
                             <p class="ml-12 font-semibold">BRI Virtual Account</p>
                             <img src="{{ asset('./logo-bank/bri.png') }}" alt="bri" class="w-20 h-6 mr-3">
                         </label>
-                        <input id="bri" type="radio" name="bank" value="bca" required
+                        <input id="bri" type="radio" name="bank" value="bri" required
                             class="absolute top-5 left-5">
                     </div>
 
                 </div>
                 <div class="flex justify-end items-end p-5">
-                    <button
-                        class="border-black border p-2 w-52 bg-black text-white hover:bg-white hover:text-black duration-300">Buat
+                    <button type="submit"
+                        class=" border-black border p-2 w-52 bg-black text-white hover:bg-white hover:text-black duration-300">Buat
                         Pesanan
                     </button>
                 </div>
@@ -126,4 +127,17 @@
             <span class="font-extrabold">Rp. <span>{{ number_format($total, 0, '', '.') }}</span></span>
         </div>
     </div>
+@endsection
+
+
+
+@section('script')
+    <script>
+        $(document).ready(function() {
+            $('#form-pembayaran').submit(function(e) {
+
+                $(this).find(':input[type="submit"]').prop('disabled', true);
+            })
+        })
+    </script>
 @endsection

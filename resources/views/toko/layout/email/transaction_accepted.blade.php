@@ -54,7 +54,7 @@
         <div>
             <div style="text-align: center; ">
                 <p style="text-align: left; padding: 5px; 0px; ">
-                <p style="font-size: 17px; font-weight: bold">TERIMA TElAH BERBELANJA DI OUTLAWS STUDIO</p> <br>
+                <p style="font-size: 17px; font-weight: bold">TERIMA KASIH TELAH BERBELANJA DI OUTLAWS STUDIO</p> <br>
                 <p>Pembayaran anda sudah kami Terima</p>
                 <p>Kami akan segera mengiirmkan paket anda</p>
             </div>

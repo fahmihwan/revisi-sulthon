@@ -36,7 +36,7 @@
                         <p>Cek Email Anda Untuk melakukan Pembayaran</p>
                     </div>
 
-                    
+
                     <div class="font-light text-center text-sm md:text-base mt-5">
                         Apablia Anda memiliki pertanyaan sehubung dengan pesanan Anda, silakan mengirimkan email
                         ke outlawsstuido@gmail.com atau whatsaapp ke nomor 082334331124. Jam operasioanl kami adalah
@@ -56,6 +56,11 @@
 
 
     <script>
+        setTimeout(function() {
+            var targetUrl = '/'; // Replace with your desired URL
+            window.location.href = targetUrl; // Redirect to the specified URL
+        }, 3000);
+
         const sidebar = document.getElementById('sidebar')
         const filterToggle = document.getElementsByClassName('btn-filter-toggle');
 
